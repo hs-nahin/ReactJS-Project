@@ -21,7 +21,7 @@ function App() {
       <div className="w-full md:w-3/5 bg-gray-800 rounded-lg shadow-md">
         {/* Header Name */}
         <header id='header-area' className="py-5">
-          <h1 className="text-3xl text-center font-semibold text-pink-700 hover:text-sky-300 duration-300 ease-in-out">
+          <h1 className="text-3xl text-center font-semibold text-blue-400 hover:text-pink-600 duration-300 ease-in-out">
             Na-Dos
           </h1>
         </header>
