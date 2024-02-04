@@ -42,7 +42,7 @@ function App() {
             </div>
             {/* Button */}
             <div>
-              <button type="button" className='bg-pink-600 text-blue-100 p-2 rounded-sm hover:bg-pink-800 transition duration-300 mt-5 md:mt-5'>Add Task</button>
+              <button type="button" className='bg-pink-700 text-blue-100 p-2 rounded-sm hover:bg-pink-800 transition duration-300 mt-5 md:mt-5'>Add Task</button>
             </div>
           </div>
           <hr className='my-5'/>
@@ -53,7 +53,7 @@ function App() {
             {/* Button Area For ToDo and Completed */}
             <div className="flex">
             <button className={`flex-1 bg-gray-600 text-blue-100 p-2 rounded-r-sm rounded-l-none transition duration-300 ${isSelected1 ? 'bg-pink-800' : ''}`} onClick={handleClick1}>Todo</button>
-              <button className={`flex-1 bg-gray-700 text-blue-100 p-2 rounded-r-sm rounded-l-none transition duration-300 ${isSelected2 ? 'bg-blue-700' : ''}`} onClick={handleClick2}>Completed</button>
+              <button className={`flex-1 bg-gray-700 text-blue-100 p-2 rounded-r-sm rounded-l-none transition duration-300 ${isSelected2 ? 'bg-blue-800' : ''}`} onClick={handleClick2}>Completed</button>
             </div>
             <div id="todo-list" className='mb-10 mt-5'>
               <h3 className='text-3xl mt-2 text-blue-300'>Task 1</h3>
