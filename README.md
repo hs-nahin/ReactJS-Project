@@ -1,3 +1,3 @@
 # ReactJS-Project
 
-This is my React.js Repository where I will share my journey of Learning React.js through building Projects.
+This is my <strong>React.js Repository</strong> where I will share my journey of Learning <strong>React.js</strong> by building Projects.
