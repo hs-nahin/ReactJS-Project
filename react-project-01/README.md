@@ -8,4 +8,4 @@ Currently, two official plugins are available:
 - [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
 Name of this APP is : <h3>Na-Dos</h3>
-Live Link of this Todo APP: <a href="https://grand-empanada-2661b6.netlify.app/" target="_blank" rel="noopener noreferrer">Na-Dos App Live Site Link</a>
+Live Link of this Todo APP: [Na-Dos App Live Site Link](https://grand-empanada-2661b6.netlify.app/){:target="\_blank"}
