@@ -1,4 +1,6 @@
 import React, { useState } from 'react';
+import { FaCheck } from "react-icons/fa6";
+import { MdDeleteOutline } from "react-icons/md";
 
 function App() {
   const [isSelected1, setIsSelected1] = useState(false);
@@ -56,10 +58,18 @@ function App() {
               <button className={`flex-1 bg-gray-700 text-blue-100 p-2 rounded-r-sm rounded-l-none transition duration-300 ${isSelected2 ? 'bg-sky-800' : ''}`} onClick={handleClick2}>Completed</button>
             </div>
             {/* Task Area */}
-            <div id="todo-list" className='mb-10 mt-5 bg-slate-700 shadow-md hover:shadow-xl ease-in-out duration-300'>
-              <h3 className='text-3xl mt-2 ml-5 pt-5 text-blue-300'>Task 1</h3>
-              <p className='text-2xl mt-1 ml-5 pb-5 text-blue-300'>Description</p>
+            <div id="todo-list" className='mb-10 mt-5 bg-slate-700 shadow-md hover:shadow-xl ease-in-out duration-300 flex justify-between'>
+              <div className="">
+                <h3 className='text-3xl mt-2 ml-5 pt-5 text-pink-600'>Task Name</h3>
+                <p className='text-2xl mt-1 ml-5 pb-5 text-sky-300'>Description</p>
+              </div>
+
+              <div className="flex gap-5 mr-5 mt-12">
+                <MdDeleteOutline className='text-3xl text-sky-300 cursor-pointer hover:text-pink-500 duration-300 ease-in-out' />
+                <FaCheck className='text-3xl text-sky-300 hover:text-emerald-500 cursor-pointer duration-300 ease-in-out'/>
+              </div>
             </div>
+
           </footer>
         </main>
       </div>
