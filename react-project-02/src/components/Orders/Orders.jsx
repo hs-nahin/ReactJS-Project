@@ -1,6 +1,8 @@
 import React from 'react';
 import { useLoaderData } from 'react-router-dom';
 import Cart from '../Cart/Cart.jsx';
+import ReviewItem from '../ReviewItem/ReviewItem.jsx';
+import './Orders.css';
 
 const Orders = () => {
     const cart = useLoaderData();
@@ -8,8 +10,13 @@ const Orders = () => {
     return (
         <>
         <div className='shop-container'>
-            <div className='products-container'>
-                <h1>orders page {cart.length}</h1>
+            <div className='review-container'>
+                {
+                    cart.map (product => <ReviewItem
+                    key={product.id}
+                    product={product}
+                    />)
+                }
             </div>
             <div className='cart-container'>
                 <Cart cart={cart} />
