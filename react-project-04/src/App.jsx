@@ -1,13 +1,14 @@
-import './App.css'
-import Navigation from './components/Navigation/Navigation'
+// App.js
+import 'react';
+import './App.css';
+import Header from './components/Header/Header';
 
 function App() {
-
   return (
     <>
-    <Navigation/>
+    <Header/>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
