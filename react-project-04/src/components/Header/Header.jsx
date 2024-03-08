@@ -5,7 +5,7 @@ import Navigation from '../Navigation/Navigation';
 
 const Header = () => {
     return (
-        <header className='flex flex-col sm:flex-row items-center justify-between px-4 py-2 sm:px-8 sm:py-4 md:px-16 lg:px-24 xl:px-32'>
+        <header className='flex flex-col sm:flex-row items-center justify-between px-4 py-2 sm:px-8 sm:py-4 md:px-16 lg:px-24 xl:px-32 font-mono'>
             <div className='flex items-center mb-4 sm:mb-0'>
                 <img src={image} alt="Logo" className='w-40 sm:w-40 cursor-pointer'/>
             </div>
