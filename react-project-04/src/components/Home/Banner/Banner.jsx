@@ -1,3 +1,4 @@
+// Banner Component
 import 'react';
 
 const Banner = () => {
