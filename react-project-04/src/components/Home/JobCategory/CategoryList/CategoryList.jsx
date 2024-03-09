@@ -1,6 +1,8 @@
-import React from 'react';
+/* eslint-disable react/prop-types */
+import 'react';
 
-const CategoryList = ({ title, jobs, image }) => {
+const CategoryList = ({ cat }) => {
+    const {title, image, jobs} = cat;
     return (
         <section className="flex justify-center cursor-pointer">
             <div className="max-w-md mx-2 my-4 p-6 bg-purple-50 rounded-md hover:shadow-md transition duration-300 flex flex-col justify-between" style={{ width: '311px', height: '244px' }}>

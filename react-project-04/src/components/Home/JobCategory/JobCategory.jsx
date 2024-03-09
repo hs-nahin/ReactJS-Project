@@ -24,14 +24,14 @@ const JobCategory = () => {
   }, []);
 
   return (
-    <div className="flex justify-center">
+    <div className="flex justify-center mt-36">
       <div>
-        <h1 className='text-center mt-12 text-4xl font-semibold'>Job Category List</h1>
-        <p className='text-center text-gray-500 mt-5 mb-12'>Explore thousands of job opportunities with all the information you need. It's your future</p>
+        <h1 className='text-center mt-12 text-4xl sm:text-5xl md:text-6xl font-semibold'>Job Category List</h1>
+        <p className='text-center text-gray-500 mt-5 mb-12 text-sm sm:text-base md:text-sm lg:text-xl xl:text-2xl'>Here are some Job Categories you might like</p>
         {error && <div>Error: {error}</div>}
         <section className='flex flex-wrap justify-center gap-5'>
           {category.map(cat => (
-            <CategoryList key={cat.id} id={cat.id} title={cat.title} jobs={cat.jobs} image={cat.image} />
+            <CategoryList key={cat.id} id={cat.id} cat={cat} />
           ))}
         </section>
       </div>
