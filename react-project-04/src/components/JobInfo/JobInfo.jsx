@@ -1,5 +1,5 @@
 import 'react';
-import { AiOutlineDollar, AiOutlineHome, AiOutlineMail, AiOutlinePhone } from 'react-icons/ai';
+import { AiOutlineDollar, AiOutlineHome, AiOutlineMail, AiOutlinePhone, AiOutlineUser } from 'react-icons/ai';
 import { useLoaderData, useParams } from 'react-router-dom';
 import bg1 from '../../assets/images/bg1.png';
 
@@ -22,11 +22,11 @@ const JobInfo = () => {
                     {/* Job Description */}
                     <p className='font-bold'>Job Descriptions: <span className='text-gray-600 font-light'>{job.job_description}</span></p>
                     {/* Job Responsibilities */}
-                    <p className='font-bold'>Job Responsibilities: <span className='text-gray-600 font-light'>{job.job_responsibility}</span></p>
+                    <p className='font-bold mt-5'>Job Responsibilities: <span className='text-gray-600 font-light'>{job.job_responsibility}</span></p>
                     {/* Educational Requirement */}
-                    <p className='font-bold'>Educational Requirements: <span className='text-gray-600 font-light'>{job.educational_requirements}</span></p>
+                    <p className='font-bold mt-5'>Educational Requirements: <span className='text-gray-600 font-light'>{job.educational_requirements}</span></p>
                     {/* Experience */}
-                    <p className='font-bold'>Experience: <span className='text-gray-600 font-light'>{job.experiences}</span></p>
+                    <p className='font-bold mt-5'>Experience: <span className='text-gray-600 font-light'>{job.experiences}</span></p>
                 </div>
                 {/* Job Details Card */}
                 <div className='bg-purple-50 max-w-md mx-auto rounded-lg p-8 mt-9 md:mt-0'> {/* Added mt-9 class */}
@@ -39,7 +39,7 @@ const JobInfo = () => {
                             <span className="text-gray-600">{job.salary}</span>
                         </h3>
                         <h3 className="flex items-center">
-                            <AiOutlineDollar className="mr-2 text-purple-700" />
+                            <AiOutlineUser className="mr-2 text-purple-700" />
                             <span className="mr-2 font-bold">Job Title:</span>
                             <span className="text-gray-600">{job.job_title}</span>
                         </h3>
