@@ -20,7 +20,7 @@ To run this project locally:
 4. Start the development server using `npm run dev`.
 5. Open your browser and visit `http://localhost:3000`.
 
-- ## Alternatively, you can visit the [Live Site](https://teal-trifle-14f919.netlify.app/).
+- ## Alternatively, you can visit the [Live Site](https://career-hive.vercel.app/).
 
 Feel free to reach out to me:
 
