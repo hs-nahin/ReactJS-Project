@@ -1,7 +1,10 @@
 import 'react';
 import { AiOutlineDollar, AiOutlineHome, AiOutlineMail, AiOutlinePhone, AiOutlineUser } from 'react-icons/ai';
 import { useLoaderData, useParams } from 'react-router-dom';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import bg1 from '../../assets/images/bg1.png';
+import { saveJobApplication } from '../../utility/localstorage';
 
 const JobInfo = () => {
     const jobs = useLoaderData();
@@ -9,6 +12,10 @@ const JobInfo = () => {
     const idInt = parseInt(id);
     const job = jobs.find(job => job.id === idInt);
 
+    const handleApplyJob = () =>{
+        saveJobApplication(idInt);
+        toast('You have applied successfully');
+    }
     return (
         <section className='font-mono'>
             {/* Heading Section */}
@@ -62,9 +69,10 @@ const JobInfo = () => {
                         </h3>
                     </div>
                     <div className="mt-8">
-                        <button className="w-full py-3 px-6 rounded-md bg-gradient-to-r from-purple-500 to-indigo-500 text-white hover:from-indigo-600 hover:to-purple-600 transition duration-500 ease-in-out transform hover:scale-105">Apply Now</button>
+                        <button onClick={handleApplyJob} className="w-full py-3 px-6 rounded-md bg-gradient-to-r from-purple-500 to-indigo-500 text-white hover:from-indigo-600 hover:to-purple-600 transition duration-500 ease-in-out transform hover:scale-105">Apply Now</button>
                     </div>
                 </div>
+                <ToastContainer/>
             </div>
         </section>
     );
