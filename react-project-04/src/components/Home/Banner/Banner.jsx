@@ -1,7 +1,7 @@
 // Banner Component
 import 'react';
 import { TypeAnimation } from 'react-type-animation';
-
+import image from '/src/assets/images/user-hasnat.png';
 const Banner = () => {
     return (
         <header className="flex flex-col-reverse sm:flex-row items-center justify-center sm:justify-between px-4 sm:px-0 bg-purple-50">
@@ -16,7 +16,7 @@ const Banner = () => {
             </div>
             {/* Second Part */}
             <div className="sm:w-1/2">
-                <img className="mx-auto sm:mx-0" src="/src/assets/images/user-hasnat.png" alt="" />
+                <img className="mx-auto sm:mx-0" src={image} alt="" />
             </div>
         </header>
     );
