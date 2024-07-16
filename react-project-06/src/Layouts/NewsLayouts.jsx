@@ -16,7 +16,7 @@ const NewsLayouts = () => {
           <Col lg={3}>
             <LeftNav />
           </Col>
-          <Col lg={9}>
+          <Col lg={6}>
             <Outlet />
           </Col>
           <Col lg={3}>
