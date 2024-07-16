@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
 const LeftNav = () => {
-    const [categories, setCategories] = useState();
+    const [categories, setCategories] = useState([]);
 
     useEffect(() => {
       fetch('http://localhost:5000/categories')

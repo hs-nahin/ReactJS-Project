@@ -1,4 +1,3 @@
-import React from "react";
 import Col from "react-bootstrap/Col";
 import Container from "react-bootstrap/Container";
 import Row from "react-bootstrap/Row";
@@ -8,20 +7,20 @@ import Header from "../Pages/Shared/Header/Header";
 import LeftNav from "../Pages/Shared/LeftNav/LeftNav";
 import RightNav from "../Pages/Shared/RightNav/RightNav";
 
-const Main = () => {
+const NewsLayouts = () => {
   return (
     <div>
       <Header />
       <Container>
         <Row>
           <Col lg={3}>
-          <LeftNav/>
+            <LeftNav />
           </Col>
-          <Col lg={6}>
-            <Outlet/>
+          <Col lg={9}>
+            <Outlet />
           </Col>
           <Col lg={3}>
-          <RightNav/>
+            <RightNav />
           </Col>
         </Row>
       </Container>
@@ -30,4 +29,4 @@ const Main = () => {
   );
 };
 
-export default Main;
+export default NewsLayouts;

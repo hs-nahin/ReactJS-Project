@@ -1,6 +1,9 @@
 import { createBrowserRouter } from "react-router-dom";
 import Main from "../Layouts/Main";
+import NewsLayouts from "../Layouts/NewsLayouts";
+import Category from "../Pages/Home/Category/Category";
 import Home from "../Pages/Home/Home/Home";
+import News from "../Pages/News/News";
 
 const router = createBrowserRouter([
   {
@@ -11,8 +14,22 @@ const router = createBrowserRouter([
         path: "/",
         element: <Home/>,
       },
+      {
+        path: "/category/:id",
+        element: <Category/>
+      }
     ],
   },
+  {
+    path: "news",
+    element: <NewsLayouts/>,
+    children: [
+      {
+        path: ":id",
+        element: <News/>
+      }
+    ]
+  }
 ]);
 
 export default router;
