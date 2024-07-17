@@ -1,19 +1,12 @@
 import moment from "moment";
-import React, { useContext } from "react";
+import React from "react";
 import { Container } from "react-bootstrap";
 import Button from "react-bootstrap/Button";
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
 import Marquee from "react-fast-marquee";
-import { FaRegUserCircle } from "react-icons/fa";
-import { Link } from "react-router-dom";
 import logo from "../../../assets/logo.png";
-import { AuthContext } from "../../../Provider/AuthProvider";
 
 
 const Header = () => {
-  const {user} = useContext(AuthContext);
-
   return (
     <Container>
       <div className="text-center">
@@ -31,30 +24,7 @@ const Header = () => {
         </Marquee>
       </div>
 
-      <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
-      <Container>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-        <Navbar.Collapse id="responsive-navbar-nav">
-          <Nav className="mx-auto">
-            <Nav.Link href="#features">
-              <Link to="/">Home</Link>
-            </Nav.Link>
-            <Nav.Link href="#pricing">About</Nav.Link>
-            <Nav.Link href="#pricing">Career</Nav.Link>
-            
-          </Nav>
-          <Nav>
-            {user && <Nav.Link href="#deets"><FaRegUserCircle className="mt-1" style={{fontSize: '2rem'}}/></Nav.Link>}
-            <Nav.Link eventKey={2} href="#memes">
-            {user ?
-            <Button variant="secondary">LogOut</Button>
-            :
-            <Link to='/login'><Button variant="secondary">LogIn</Button></Link>}
-            </Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-      </Container>
-    </Navbar>
+      
     </Container>
   );
 };
