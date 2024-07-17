@@ -1,37 +1,55 @@
-import { createBrowserRouter } from "react-router-dom";
+import { createBrowserRouter, Navigate } from "react-router-dom";
+import LogInLayout from "../Layouts/LogInLayout";
 import Main from "../Layouts/Main";
 import NewsLayouts from "../Layouts/NewsLayouts";
 import Category from "../Pages/Home/Category/Category";
+import LogIn from "../Pages/LogIn/LogIn/LogIn";
+import Register from "../Pages/LogIn/Register/Register";
 import News from "../Pages/News/News";
 
 const router = createBrowserRouter([
   {
     path: "/",
-    element: <Main/>,
+    element: <LogInLayout />,
     children: [
       {
         path: "/",
-        element: <Category/>,
-        loader: () => fetch('http://localhost:5000/news')
+        element: <Navigate to="/category/0" />,
       },
       {
-        path: "/category/:id",
-        element: <Category/>,
-        loader: ({params}) => fetch(`http://localhost:5000/categories/${params.id}`)
-      }
+        path: "login",
+        element: <LogIn />,
+      },
+      {
+        path: "register",
+        element: <Register />,
+      },
+    ],
+  },
+  {
+    path: "category",
+    element: <Main />,
+    children: [
+      {
+        path: ":id",
+        element: <Category />,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/categories/${params.id}`),
+      },
     ],
   },
   {
     path: "news",
-    element: <NewsLayouts/>,
+    element: <NewsLayouts />,
     children: [
       {
         path: ":id",
-        element: <News/>,
-        loader: ({params}) => fetch(`http://localhost:5000/news/${params.id}`)
-      }
-    ]
-  }
+        element: <News />,
+        loader: ({ params }) =>
+          fetch(`http://localhost:5000/news/${params.id}`),
+      },
+    ],
+  },
 ]);
 
 export default router;

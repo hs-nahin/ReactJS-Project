@@ -12,12 +12,24 @@ const NavigationBar = () => {
         <Container>
           <Navbar.Toggle aria-controls="responsive-navbar-nav" />
           <Navbar.Collapse id="responsive-navbar-nav">
-            <Nav className="mx-auto">
-                <Link to="/">Home</Link>
-              <Nav.Link href="#pricing">About</Nav.Link>
-              <Nav.Link href="#pricing">Career</Nav.Link>
+            <Nav className="mx-auto gap-3">
+              <Link
+                className="text-secondary text-decoration-none"
+                to="/category/0"
+              >
+                Home
+              </Link>
+              <Link className="text-secondary text-decoration-none" to="/about">
+                About
+              </Link>
+              <Link
+                className="text-secondary text-decoration-none"
+                to="/career"
+              >
+                Career
+              </Link>
             </Nav>
-            <Nav>
+            <Nav className="gap-3">
               {user && (
                 <FaRegUserCircle
                   className="mt-1"
