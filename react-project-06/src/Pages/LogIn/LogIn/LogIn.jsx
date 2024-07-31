@@ -4,15 +4,18 @@ import { Link } from "react-router-dom";
 import { AuthContext } from "../../../Provider/AuthProvider";
 
 const LogIn = () => {
-    const { SignIn } = useContext(AuthContext);
-    const handleSignIn = (event) => {
-      event.preventDefault();
-      const form = event.target;
-      const email = form.email.value;
-      const password = form.password.value;
-      console.log(email, password);
+  const { SignIn } = useContext(AuthContext);
 
-      SignIn(email, password)
+  const handleSignIn = (event) => {
+    event.preventDefault();
+    const form = event.target;
+    const email = form.email.value;
+    const password = form.password.value;
+
+    console.log("Email:", email);
+    console.log("Password:", password);
+
+    SignIn(email, password)
       .then((result) => {
         const loggedUser = result.user;
         console.log(loggedUser);
@@ -20,7 +23,7 @@ const LogIn = () => {
       .catch((error) => {
         console.error("Login failed:", error.message);
       });
-    };
+  };
 
   return (
     <Container className="w-25 mx-auto">
