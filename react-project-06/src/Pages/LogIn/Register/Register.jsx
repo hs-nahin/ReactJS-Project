@@ -1,6 +1,7 @@
 import React, { useContext, useState } from "react";
 import { Button, Container, Form } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import useTitle from "../../../CustomHooks/useTitle";
 import { AuthContext } from "../../../Provider/AuthProvider";
 
 const Register = () => {
@@ -26,6 +27,9 @@ const Register = () => {
   const handleAccept = event => {
     setAccept(event.target.checked)
   }
+
+    // Title
+    useTitle("Register");
   return (
     <Container className="w-25 mx-auto">
       <h3>Please Register</h3>

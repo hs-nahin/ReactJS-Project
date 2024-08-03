@@ -1,6 +1,7 @@
 import React, { useContext } from "react";
 import { Button, Container, Form } from "react-bootstrap";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import useTitle from "../../../CustomHooks/useTitle";
 import { AuthContext } from "../../../Provider/AuthProvider";
 
 const LogIn = () => {
@@ -8,6 +9,9 @@ const LogIn = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || '/category/0';
+  
+  // Title
+  useTitle("LogIn");
 
   const handleSignIn = (event) => {
     event.preventDefault();
