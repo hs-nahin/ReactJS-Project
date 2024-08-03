@@ -5,10 +5,10 @@ import useTitle from "../../../CustomHooks/useTitle";
 import { AuthContext } from "../../../Provider/AuthProvider";
 
 const Register = () => {
-  const {createUser} = useContext(AuthContext);
+  const { createUser } = useContext(AuthContext);
   const [accept, setAccept] = useState(false);
 
-  const handleRegister = event =>{
+  const handleRegister = (event) => {
     event.preventDefault();
     const form = event.target;
     const name = form.name.value;
@@ -16,20 +16,20 @@ const Register = () => {
     const email = form.email.value;
     const password = form.password.value;
     createUser(email, password)
-    .then (result => {
-      const createdUser = result.user;
-      console.log(createdUser);
-    })
-    .catch (error => {
-      console.log(error)
-    })
-  }
-  const handleAccept = event => {
-    setAccept(event.target.checked)
-  }
+      .then((result) => {
+        const createdUser = result.user;
+        console.log(createdUser);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
+  const handleAccept = (event) => {
+    setAccept(event.target.checked);
+  };
 
-    // Title
-    useTitle("Register");
+  // Title
+  useTitle("Register");
   return (
     <Container className="w-25 mx-auto">
       <h3>Please Register</h3>
@@ -74,10 +74,14 @@ const Register = () => {
 
         <Form.Group className="mb-3" controlId="formBasicCheckbox">
           <Form.Check
-          onClick={handleAccept}
+            onClick={handleAccept}
             type="checkbox"
             name="accept"
-            label={<>Accept <Link to='/terms'>Terms and Conditions</Link></>}
+            label={
+              <>
+                Accept <Link to="/terms">Terms and Conditions</Link>
+              </>
+            }
           />
         </Form.Group>
         <Button disabled={!accept} variant="primary" type="submit">

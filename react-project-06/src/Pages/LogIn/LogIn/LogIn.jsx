@@ -8,8 +8,8 @@ const LogIn = () => {
   const { SignIn } = useContext(AuthContext);
   const navigate = useNavigate();
   const location = useLocation();
-  const from = location.state?.from?.pathname || '/category/0';
-  
+  const from = location.state?.from?.pathname || "/category/0";
+
   // Title
   useTitle("LogIn");
 
@@ -26,7 +26,7 @@ const LogIn = () => {
       .then((result) => {
         const loggedUser = result.user;
         console.log(loggedUser);
-        navigate(from, {replace: true})
+        navigate(from, { replace: true });
       })
       .catch((error) => {
         console.error("Login failed:", error.message);

@@ -7,8 +7,8 @@ import useTitle from "../../CustomHooks/useTitle";
 import EditorsInsights from "./EditorsInsights";
 
 const News = () => {
-    // Title
-    useTitle("News Detail");
+  // Title
+  useTitle("News Detail");
   const news = useLoaderData();
   const { title, details, image_url, category_id } = news;
 
