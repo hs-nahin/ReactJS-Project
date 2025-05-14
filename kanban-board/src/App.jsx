@@ -30,6 +30,16 @@ const App = () => {
   const [activeColumn, setActiveColumn] = useState["todo"];
   const [draggedItem, setDraggedItem] = useState(null);
 
+  const addNewTask = () => {
+    if(newTask.trim() === "") return;
+    const updatedColumn = {...column};
+    updatedColumn[activeColumn].items.push({
+      id: Date.now.toString(),
+      content: newTask
+    });
+    setColumn(updatedColumn);
+    setNewTask("");
+  }
   return (
     <div>
       <h1 className="text-blue-600 text-7xl">hello</h1>
