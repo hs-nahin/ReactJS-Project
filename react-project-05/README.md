@@ -2,7 +2,7 @@
 
 CodeTrack is a lightweight, modern Todo application built using **React** and **Vite**, with global state managed through the **Context API** and styled using **Tailwind CSS**. It allows users to add, edit, complete, and delete tasks with a clean and responsive interface. Todos are persisted using **localStorage**, so your data stays even after a page refresh.
 
-> 🚀 **Live Demo**: [https://gleeful-griffin-e461d0.netlify.app/](https://gleeful-griffin-e461d0.netlify.app/)
+> 🚀 **Live Demo**: [Todo App](https://gleeful-griffin-e461d0.netlify.app/)
 
 ---
 
